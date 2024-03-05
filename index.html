@@ -40,6 +40,24 @@
         </nav>
       </header>
         
+        <dialog id="dialog">
+          <h1>¿Sabias que puedes abrir un modal así?</h1>
+          <p>¡Y es totalmente nativo!</p>
+          <button id="hide">Cerrar modal</button>
+        </dialog>
+
+        <button id="show">Ver más información</button>
+
+        <script>
+          window.show.addEventListener('click', () => {
+            window.dialog.showModal()
+          })
+
+          window.hide.addEventListener('click', () => {
+            window.dialog.close()
+          })
+        </script>
+
         <main>
         <p>+15 años de experiencia como <strong>Ingeniero de Software</strong>. Creador y divulgador de programación.</p>
         
@@ -51,6 +69,7 @@
             <li class="list-item">Twitter - 2020</li>
         </ul>
         
+        <a download href="/images/yo.jpg">
         <img 
         id="photo-image"
         width="200"
@@ -58,6 +77,7 @@
         title="Foto de Carlos" 
         alt="Una foto de Carlos sonriendo y mirando a camara" 
         src="/images/yo.jpg">
+        </a>
         
         <h2 id="proyectos">Proyectos realizados</h2>
 
@@ -65,10 +85,10 @@
             <header>
                 <h3>Mis tecnologías <span>favoritas</span></h3>
             </header>
-            <ol>
+            <ol type="1" reversed start="10">
                <li>HTML</li> 
                <li>CSS</li>
-               <li>JavaScript</li>
+               <li value="5">JavaScript</li>
                <li>Node.js</li>
             </ol>   
         </aside>
@@ -80,10 +100,11 @@
         <section>
             <article>
                 <header>
-                    <h4>Sitio Web Corporativo</h4>
+                    <h4>La página de Tesla</h4>
+                    <img style="width:100%; aspect-ratio: 638/317;" loading="lazy" src="/images/tesla.jpg" alt="Captura de pantalla de la página web de Tesla">
                 </header>
               <p>
-                Desarrollo de un sitio web corporativo con una interfaz amigable y moderna.
+                Elon Musk me llamó e hice en una tarde esta página desde cero
               </p>
               <small>Tecnologias utilizadas: HTML, CSS, JavaScript</small>
             </article>
@@ -110,12 +131,96 @@
 
             
         </section>
+
+        <section>
+          <h2>Preguntas frecuentes</h2>
+
+          <details>
+            <summary>¿Que estudios tienes?</summary>
+            <p>Estudié en la universidad de Villanova una Ingenieria de Informática durante 5 años</p>
+          </details>
+
+          <details>
+            <summary>¿Cuáles son tus hobbies?</summary>
+            <p>Me gusta mucho el deporte, sobre todo el fútbol y el baloncesto</p>
+          </details>
+
+          <details>
+            <summary>¿Cual es tu lenguje favorito?</summary>
+            <p>Me encanta JavaScript, es un lenguaje my versátil y con el que se pueden hacer muchas cosas</p>
+          </details>
+        </section>
+
+        <section>
+          <h2>Formulario de contacto</h2>
+
+          <form method="post" action="/">
+            <fieldset>
+              <legend>Información personal</legend>
+              <div>
+               <label>Nombre:
+                 <input type="text" name="name" placeholder="Carlos" required>
+                </label>
+              </div>
+
+              <label>Email: 
+                <input type="email" name="email" placeholder="asta.fcb@yahoo.com" required>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Información adicional</legend>
+              <div>
+                <label>Teléfono:
+                  <input type="tel" name="phone" placeholder="Carlos" required pattern="[0-9]{9}">
+                 </label>
+               </div>
+
+            </fieldset>
+
+            <fieldset>
+              <legend>Otros</legend>
+
+              <div>
+                <label for="why">¿Porque qué quieres contactar?</label>
+                <select name="why" id="why">
+                  <option value="1">Trabajo</option>
+                  <option value="2">Duda</option>
+                  <option value="3">Más Información</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="terms">¿Aceptas los términos?</label>
+                <input type="checkbox" id="terms" name="terms" required>
+              </div>
+
+              <div>
+                <datalist id="languages">
+                  <option value="JavaScript"></option>
+                  <option value="Python"></option>
+                  <option value="Java"></option>
+                  <option value="C#"></option>
+                </datalist>
+                <label>
+                  ¿Con que lenguaje quieres que te ayude?
+                  <input list="languages" name="languages"
+                </label>
+              </div>
+            </fieldset>
+
+
+            <button type="submit">Enviar contacto</button>
+          </form>
+        </section>
+
         </main>
         
         <footer>
          Copyright © 2024 - El portfolio más bello del mundo
-
-         <a href="mailto"
+         <a href="mailto:asta.fcb@yahoo.com">Envíame un correo</a>
+         <a href="tel:+34688888889">Llamar por teléfono</a>
+         <a href="whatsapp://send?text=Hola Carlos">Llamar por teléfono</a>
         </footer>
         
         
