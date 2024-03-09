@@ -1,0 +1,1 @@
+This project is open source and everyone can contribute to him and use this code for themselves repos but if u want to create a pr dont do it
